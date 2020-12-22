@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route method="GET" url="/V1/getById/:id">
+		<service class="AHT\Blog\Api\PostRepositoryInterface" method="getById"/>
+		<resources>
+            <resource ref="anonymous"/>
+        </resources>
+	</route>
+
+	<route method="GET" url="/V1/post">
+		<service class="AHT\Blog\Model\PostRepository" method="getList"/>
+		<resources>
+            <resource ref="anonymous"/>
+        </resources>
+	</route>
+
+	<route method="POST" url="/V1/post">
+		<service class="AHT\Blog\Api\PostRepositoryInterface" method="createPost"/>
+		<resources>
+            <resource ref="anonymous"/>
+        </resources>
+	</route>
+
+	<route method="PUT" url="/V1/post/:postId">
+		<service class="AHT\Blog\Api\PostRepositoryInterface" method="updatePost"/>
+		<resources>
+            <resource ref="anonymous"/>
+        </resources>
+	</route>
+
+	<route method="DELETE" url="/V1/post/:postId">
+		<service class="AHT\Blog\Api\PostRepositoryInterface" method="deletePostById"/>
+		<resources>
+            <resource ref="anonymous"/>
+        </resources>
+	</route>
+
+	<route url="/V1/customers" method="POST">
+		<service class="Magento\Customer\Api\AccountManagementInterface" method="createAccount"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+</routes>

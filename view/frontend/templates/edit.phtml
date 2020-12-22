@@ -1,0 +1,21 @@
+<?php //$post = $block->getPost();?>
+
+<?php
+
+	use AHT\Blog\Helper\Inventory;
+
+	$api = new Inventory();
+	$url = "http://localhost/magento/rest/default/V1/getById/1";
+
+	$result = $api->api($url);
+?>
+<div class="container">
+    <h2>Page Edit</h2>
+    <form method='POST' action="http://localhost/magento/blog/index/save">
+	    <div class="form-group">
+	        <label for="name">Name</label>
+	        <input type="text" class="form-control" id="name" placeholder="Enter a name" name="name" value="<?php echo $result[1]; ?>">
+	    </div>
+	    <button style="margin-top: 20px;" type="submit" class="btn btn-primary" name="editbtn" value="<?php if (isset($result[0])) echo $result[1]; ?>">Submit</button>
+	</form>
+</div>

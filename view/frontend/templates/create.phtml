@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>Page Create</h2>
+	<form method='POST' action="<?php echo $block->getBaseUrl(); ?>blog/index/save">
+	    <div class="form-group">
+	        <label for="name">Name</label>
+	        <input type="text" class="form-control" id="name" placeholder="Enter a name" name="name">
+	    </div>
+
+	    <button style="margin-top: 20px;" type="submit" class="btn btn-primary" name="createbtn">Submit</button>
+	</form>
+</div>

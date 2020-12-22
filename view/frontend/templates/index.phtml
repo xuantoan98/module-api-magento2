@@ -1,0 +1,29 @@
+
+<table class="table table-bordered table-striped table-hover table-reponsive scroll">
+    <thead>
+    	<a href="<?php echo $block->getBaseUrl(); ?>blog/index/create" class="btn btn-primary btn-xs pull-right">Create New Post</a>
+	  	<tr>
+		    <th>Id</th>
+		    <th>Name</th>
+		    <th colspan="2">Action</th>
+	    </tr>
+    </thead>
+	<tbody>
+		<?php 
+			$posts = $block->getPosts();
+
+			foreach ($posts as $post) :
+		?>
+			<tr style="border: 1px solid #dddddd; text-align: left; padding: 8px;">
+				<td><?php echo $post->getId(); ?></td>
+				<td><?php echo $post->getName(); ?></td>
+				<td>
+					<a href="<?php echo $block->getBaseUrl();?>blog/index/edit/post_id/<?php echo $post->getId(); ?>">Edit</a>
+				</td>
+				<td>
+					<a href="<?php echo $block->getBaseUrl();?>blog/index/delete/post_id/<?php echo $post->getId(); ?>">Delete</a>
+				</td>
+			</tr>
+		<?php endforeach;?>
+	</tbody>
+</table>
