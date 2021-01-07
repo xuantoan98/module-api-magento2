@@ -10,7 +10,7 @@ class Edit extends Action
 
     protected $_postFactory;
 
-	protected $_postRepository;
+    protected $_postRepository;
 
     protected $_coreRegistry;
     
