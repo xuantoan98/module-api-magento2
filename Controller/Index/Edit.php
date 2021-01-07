@@ -8,7 +8,7 @@ class Edit extends Action
 {
     protected $_pageFactory;
 
-	protected $_postFactory;
+    protected $_postFactory;
 
 	protected $_postRepository;
 
