@@ -37,22 +37,22 @@ class InstallSchema implements InstallSchemaInterface
             )
                 ->addColumn(
                     'post_id',
-					\Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
-					null,
-					[
-						'identity' => true,
-						'nullable' => false,
-						'primary'  => true,
-						'unsigned' => true,
-					],
-					'Post ID'
+			\Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
+			null,
+			[
+				'identity' => true,
+				'nullable' => false,
+				'primary'  => true,
+				'unsigned' => true,
+			],
+			'Post ID'
                 )
                 ->addColumn(
                     'name',
-					\Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
-					255,
-					['nullable => false'],
-					'Name'
+			\Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+			255,
+			['nullable => false'],
+			'Name'
                 )
                 ->setComment('Blog Post Table');
             $installer->getConnection()->createTable($table);
