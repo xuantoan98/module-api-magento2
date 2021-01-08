@@ -2,6 +2,8 @@
 
 ## Bắt đầu ngay !
 
+### Sử dụng phần mềm PostMan để thực thi các API.
+
 ### Tạo mới module
 ```php
 // registration.php file
